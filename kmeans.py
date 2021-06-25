@@ -35,12 +35,12 @@ class KMeans:
             if self.plot_steps:
                 self.plot()
             # update centroids
-            centrodis_old = self.centroids
+            centroids_old = self.centroids
             self.centroids = self._get_centroids(self.clusters)
             if self.plot_steps:
                 self.plot()
             # check convergence
-            if self._is_converged(centrodis_old, self.centroids):
+            if self._is_converged(centroids_old, self.centroids):
                 break
 
         # return cluster labels

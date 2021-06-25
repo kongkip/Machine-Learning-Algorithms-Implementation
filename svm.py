@@ -32,11 +32,11 @@ class SVM:
 
 
 if __name__ == '__main__':
-    X, y = make_blobs(n_samples=50, n_features=2, centers=2)
-    # y = np.where(y == 0, -1, 1)
-    # clf = SVM()
-    # clf.fit(X, y)
-    #
-    # print(clf.w, clf.b)
-    #
-    # print(clf.predict(X[0]))
+    _X, _y = make_blobs(n_samples=50, n_features=2, centers=2)
+    _y = np.where(_y == 0, -1, 1)
+    clf = SVM()
+    clf.fit(_X, _y)
+
+    print(clf.weights, clf.bias)
+
+    print(clf.predict(_X[0]))
